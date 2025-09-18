@@ -4,17 +4,45 @@
   <meta charset="UTF-8">
   <title>Player</title>
   <link rel="stylesheet" href="font-awesome.min.css">
+  <style>
+    .player {
+      width: 800px;
+      height: 600px
+    }
+    .player .screen {
+      width: 100%;
+      height: 100%
+    }
+    .player .bottom-controls {
+      background-color: black
+    }
+    .player .player-button {
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border-style: none;
+      cursor: pointer;
+      color: white
+    }
+    .player .player-button .icon {
+      text-align: center
+    }
+  </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;">
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
-    <div style="background-color: black">
-      <button class="js-play-button" style="width: 30px; height: 30px; background-color: transparent; border-style: none; cursor: pointer; color: white;">
-        <i style="text-align: center;" class="fa fa-play" aria-hidden="true"></i>
-      </button>
-      <button class="js-pause-button" style="width: 30px; height: 30px; background-color: transparent; border-style: none; cursor: pointer; color: white;">
-        <i style="text-align: center;" class="fa fa-pause" aria-hidden="true"></i>
-      </button>
+  <div id="player" class="player">
+    <div class="js-video-container screen"></div>
+    <div class="bottom-controls">
+      <div>
+        <button class="js-play-button player-button">
+          <i class="fa fa-play icon" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div>
+        <button class="js-pause-button player-button">
+          <i class="fa fa-pause icon" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </div>
 
