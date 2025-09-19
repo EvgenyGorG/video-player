@@ -23,6 +23,11 @@
       border-style: none;
       cursor: pointer;
       color: white;
+      width: 30px;
+      height: 30px;
+    }
+    .player .player-button.play {
+      margin-right: 5px;
     }
     .player .player-button .icon {
       text-align: center;
@@ -34,10 +39,10 @@
   <div id="player" class="player">
     <div class="js-video-container screen"></div>
     <div class="bottom-controls">
-      <button class="js-play-button player-button">
+      <button class="js-play-button player-button play">
         <i class="fa fa-play icon" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button player-button">
+      <button class="js-pause-button player-button play">
         <i class="fa fa-pause icon" aria-hidden="true"></i>
       </button>
       <button class="js-mute-button player-button">
