@@ -13,10 +13,12 @@
       flex-direction: column;
     }
     .player .screen {
+      display: flex;
       flex-grow: 1;
     }
     .player .bottom-controls {
       background-color: black;
+      display: flex;
     }
     .player .player-button {
       background-color: transparent;
@@ -50,6 +52,10 @@
       </button>
       <button class="js-volume-button player-button">
         <i class="fa fa-volume-off icon" aria-hidden="true"></i>
+      </button>
+      <div style="flex-grow: 1;" ></div>
+      <button class="js-fullscreen-button player-button">
+        <i class="fa fa-expand icon" aria-hidden="true"></i>
       </button>
     </div>
   </div>
