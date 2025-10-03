@@ -40,7 +40,7 @@
       height: 35px;
       font-size: 20px;
     }
-    .player .video-timer {
+    .player .viewing-time {
       font-family: "Roboto", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
@@ -51,9 +51,31 @@
     .player .player-button.play {
       margin-right: 2px;
     }
-    .player .video-progressbar {
+    .player .viewing-panel {
       flex-grow: 1;
-      }
+      height: 5px;
+      border-radius: 10px;
+      margin: 0px 10px 0px 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .player .viewing-progressbar {
+      height: 5px;
+      border-radius: 10px;
+      background-color: red;
+    }
+    .player .viewing-slider {
+      height: 8.2px;
+      width: 8.2px;
+      border-radius: 50%;
+      background-color: #f8104d;
+      border-style: solid;
+      border-color: white;
+      border-width: 2.6px;
+      display: inline-block;
+      margin: 0px 0px 0px -7px;
+    }
   </style>
 </head>
 <body>
@@ -72,11 +94,14 @@
       <button class="js-volume-button player-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <div class="video-timer">
+      <div class="viewing-time">
         <span class="js-current-time"></span>
       </div>
-      <div class="video-progressbar"></div>
-      <div class="video-timer">
+      <div class="js-progress viewing-panel">
+        <div class="js-progress-slider viewing-progressbar"></div>
+        <div><span class="viewing-slider"></span></div>
+      </div>
+      <div class="viewing-time">
         <span class="js-duration"></span>
       </div>
       <button class="js-fullscreen-button player-button">
