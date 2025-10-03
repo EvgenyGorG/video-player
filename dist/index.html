@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="font-awesome.min.css">
   <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg" />
@@ -37,10 +40,18 @@
       height: 35px;
       font-size: 20px;
     }
+    .player .video-timer {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      color: white;
+    }
     .player .player-button.play {
       margin-right: 2px;
     }
-    .player .bottom-controls .empty-el {
+    .player .video-progressbar {
       flex-grow: 1;
       }
   </style>
@@ -61,7 +72,13 @@
       <button class="js-volume-button player-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <div class="empty-el"></div>
+      <div class="video-timer">
+        <span class="js-current-time"></span>
+      </div>
+      <div class="video-progressbar"></div>
+      <div class="video-timer">
+        <span class="js-duration"></span>
+      </div>
       <button class="js-fullscreen-button player-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
