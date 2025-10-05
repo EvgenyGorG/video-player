@@ -44,6 +44,15 @@
       height: 35px;
       font-size: 20px;
     }
+    .player .player-button.play {
+      margin-right: 2px;
+    }
+    .player .viewing-panel {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
     .player .viewing-time {
       font-family: "Roboto", sans-serif;
       font-optical-sizing: auto;
@@ -52,19 +61,15 @@
       font-variation-settings: "wdth" 100;
       color: white;
     }
-    .player .player-button.play {
-      margin-right: 2px;
-    }
-    .player .viewing-panel {
+    .player .viewing-progressbar {
       flex-grow: 1;
       height: 5px;
-      border-radius: 10px;
       margin: 0px 10px 0px 10px;
       display: flex;
       flex-direction: row;
       align-items: center;
     }
-    .player .viewing-progressbar {
+    .player .viewing-slider-line {
       height: 5px;
       border-radius: 10px;
       background-color: red;
@@ -84,7 +89,7 @@
       transition-duration: .3s;
       transition-timing-function: easy-in;
     }
-    .player .viewing-panel:hover .viewing-slider {
+    .player .viewing-progressbar:hover .viewing-slider {
       opacity: 1;
       transition-property: opacity;
       transition-duration: .3s;
@@ -94,7 +99,9 @@
 </head>
 <body>
   <div id="player" class="player">
+
     <div class="js-video-container screen"></div>
+
     <div class="bottom-controls">
       <button class="js-play-button player-button play">
         <i class="fa fa-play" aria-hidden="true"></i>
@@ -108,19 +115,24 @@
       <button class="js-volume-button player-button">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <div class="viewing-time">
-        <span class="js-current-time"></span>
+
+      <div class="viewing-panel">
+        <div class="viewing-time">
+          <span class="js-current-time"></span>
+        </div>
+        <div class="js-progress viewing-progressbar">
+          <div class="js-progress-slider viewing-slider-line"></div>
+          <div><span class="viewing-slider"></span></div>
+        </div>
+        <div class="viewing-time">
+          <span class="js-duration"></span>
+        </div>
       </div>
-      <div class="js-progress viewing-panel">
-        <div class="js-progress-slider viewing-progressbar"></div>
-        <div><span class="viewing-slider"></span></div>
-      </div>
-      <div class="viewing-time">
-        <span class="js-duration"></span>
-      </div>
+
       <button class="js-fullscreen-button player-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
+
     </div>
   </div>
 
